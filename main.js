@@ -28,3 +28,4 @@ async function getWeather(city) {
 function displayData(cityName, tempRaw, status) {
     
 }
+// uzeedhiy
