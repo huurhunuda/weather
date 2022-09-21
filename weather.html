@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Lato:wght@100&family=Manrope:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@500&family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="lightContainer">
+            <div class="ellipseBackgroundLight">
+                <div class="firstLight"></div>
+                <div class="secondLight"></div>
+                <div class="thirdLight"></div>
+                <div class="fourthLight"></div>
+            </div>
+            <div class="lightNarSarContainer">
+                <img src="zuragnuudn/Ellipse21.png" id="containerDotorhDuguiNar">
+                <div class="light">
+                    <span class="dateLight">September 16, 2022</span>
+                    <div class="searchteiHesgLight"> 
+                        <span class="locationLight">In yo heart</span>
+                        <input type="text" placeholder="yu haimaaraaganbdee..." class="searchLight">
+                        <img src="zuragnuudn/searchIcon.png" id="searchIconLight" onclick="searchGarjIrneLight()" width="40px">
+                    </div>
+                    <img src="zuragnuudn/sun.png" width="400px">
+                    <span class="degreeLight">247°</span>
+                    <span class="conditionLight">It's melting me :p</span>
+                </div>
+                <img src="zuragnuudn/Ellipse22.png" id="containerDotorhDuguiSar">
+            </div>
+        </div>
+        <div class="darkContainer">
+            <div class="ellipseBackgroundDark">
+                <div class="firstDark"></div>
+                <div class="secondDark"></div>
+                <div class="thirdDark"></div>
+                <div class="fourthDark"></div>
+            </div>
+            <div class="darkNarSarContainer">
+                <img src="zuragnuudn/Ellipse22.png" id="containerDotorhDuguiSarDark">
+                <div class="dark">
+                    <span class="dateDark">September 16, 2022</span>
+                    <div class="searchteiHesgDark"> 
+                        <span class="locationDark">In yo heart</span>
+                        <form>
+                            <input type="searchDark" placeholder="yu haimaaraaganbdee..." class="searchDark" >
+                        </form>
+                        <img src="zuragnuudn/searchIcon.png" id="searchIconDark" onclick="searchGarjIrneDark()" width="40px">
+                    </div>
+                    <img src="zuragnuudn/sun.png" width="400px">
+                    <span class="degreeDark">247°</span>
+                    <span class="conditionDark">It's melting me :p</span>
+                </div>
+                <img src="zuragnuudn/Ellipse21.png" id="containerDotorhDuguiNarDark">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./main.js"></script>
+</html>
