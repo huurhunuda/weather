@@ -4,6 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
 }
 .ellipseBackgroundLight {
     z-index: 20;
@@ -142,12 +143,12 @@ body {
 .dateLight {
     color: #6B7280;
     font-size: 15px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 .dateDark {
     color: #6B7280;
     font-size: 15px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 .locationLight {
     color: #111827;
@@ -168,6 +169,7 @@ body {
     font-style: normal;
     font-weight: 800;
     font-size: 80px;
+    line-height: 150px;
 }
 .degreeDark {
     background: linear-gradient(180deg, #474F61 0%, #979AA0 100%);
@@ -193,13 +195,20 @@ body {
     display: flex;
     flex-direction: row;
 }
-.searchLight {
-    display: none;
-}
 span {
     margin-left: 30px;
     font-family: 'Manrope';
     font-style: 'normal';
+}
+.picContainerLight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.picContainerDark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .lightNarSarContainer {
     width: 400px;
@@ -213,26 +222,26 @@ span {
 }
 #containerDotorhDuguiNar {
     position: absolute;
-    top: -100px;
-    left: -100px;
+    top: -90px;
+    right: -90px;
     z-index: 20;
 }
 #containerDotorhDuguiNarDark {
     position: absolute;
-    bottom: -70px;
-    right: -70px;
+    bottom: -60px;
+    left: -60px;
     z-index: 20;
 }
 #containerDotorhDuguiSar {
     position: absolute;
-    bottom: -70px;
-    right: -70px;
+    bottom: -60px;
+    left: -60px;
     z-index: 20;
 }
 #containerDotorhDuguiSarDark {
     position: absolute;
-    top: -70px;
-    left: -70px;
+    top: -60px;
+    right: -60px;
     z-index: 20;
 }
 .searchDark {
@@ -245,13 +254,40 @@ span {
 }
 #searchIconDark {
     display: flex;
+    position: absolute;
+    right: 20px;
 }
 .searchteiHesgDark {
     display: flex;
-    flex-direction: row;
+    height: 80px;
+    align-items: center;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px ) and (min-width: 401px) {
     .light {
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+    }
+    .lightContainer {
+        background-color: #fff;
+        width: 100vw;
+        height: 100vh;
+    }
+    .dark {
+        background-color: #0B0F1A;
+        width: 100vw;
+        height: 100vh;
+    }
+    .darkContainer {
+        background-color: #0B0F1A;
+        width: 100vw;
+        height: 100vh;
+    }
+    .darkNarSarContainer {
+        width: 100vw;
+        height: 100vh;
+    }
+    .lightNarSarContainer {
         width: 100vw;
         height: 100vh;
     }
@@ -267,14 +303,36 @@ span {
     #containerDotorhDuguiSarDark {
         display: none;
     }
-    .dark {
-        width: 100vw;
-        height: 100vh;
+    .ellipseBackgroundLight {
+        display: none;
+    }
+    .ellipseBackgroundDark {
+        display: none;
+    }
+}
+@media screen and (max-width : 400px) {
+    .searchLight {
+        width: 200px;
+    }
+    .searchDark {
+        width: 200px;
     }
     .ellipseBackgroundLight {
         display: none;
     }
     .ellipseBackgroundDark {
+        display: none;
+    }
+    #containerDotorhDuguiNar {
+        display: none;
+    }
+    #containerDotorhDuguiSar {
+        display: none;
+    }
+    #containerDotorhDuguiNarDark {
+        display: none;
+    }
+    #containerDotorhDuguiSarDark {
         display: none;
     }
 }
@@ -290,6 +348,7 @@ span {
 }
 .searchDark {
     border: 0.5px solid #F3F4F6;
+    color: #F3F4F6;
     width: 250px;
     height: 30px;
     padding: 9px 4px 9px 40px;
