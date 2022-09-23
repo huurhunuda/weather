@@ -18,19 +18,19 @@ let currMonth = months[today.getMonth()];
 let unixNow = Math.floor(Date.now()/1000)
 document.getElementsByClassName('dateLight')[0].innerHTML = currMonth + " " + today.getDate() + ", " + today.getFullYear();
 document.getElementsByClassName('dateDark')[0].innerHTML = currMonth + " " + today.getDate() + ", " + today.getFullYear();
-const defaultDisplay = () => {
+
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=Ulaanbaatar&appid=b54c363da58b83c8327f53f5ddbc81c0`).then((res) => {
         return res.json();
     }).then((data) => {
         displayDataDefault(data.main.temp, data.weather[0].main, data.sys.sunrise, data.sys.sunset)
     })
-    function displayDataDefault(tempRaw, status, unixSR, unixSS) {
+    function displayDataDefault(tempRawDefault, statusDefault, unixSRDefault, unixSSDefault) {
         let day = true
-        document.getElementsByClassName("degreeLight")[0].innerHTML = Math.round(tempRaw - 273) + "°"
-        document.getElementsByClassName("conditionLight")[0].innerHTML = status
-        document.getElementsByClassName("degreeDark")[0].innerHTML = Math.round(tempRaw - 273) + "°"
-        document.getElementsByClassName("conditionDark")[0].innerHTML = status
-        if(unixNow >= unixSR && unixNow <= unixSS) {
+        document.getElementsByClassName("degreeLight")[0].innerHTML = Math.round(tempRawDefault - 273) + "°"
+        document.getElementsByClassName("conditionLight")[0].innerHTML = statusDefault
+        document.getElementsByClassName("degreeDark")[0].innerHTML = Math.round(tempRawDefault - 273) + "°"
+        document.getElementsByClassName("conditionDark")[0].innerHTML = statusDefault
+        if(unixNow >= unixSRDefault && unixNow <= unixSSDefault) {
             day = true
             document.getElementsByClassName("lightContainer")[0].style.display = 'flex';
             document.getElementsByClassName("darkContainer")[0].style.display = 'none';
@@ -39,37 +39,37 @@ const defaultDisplay = () => {
             document.getElementsByClassName("lightContainer")[0].style.display = 'none';
             document.getElementsByClassName("darkContainer")[0].style.display = 'flex';
         }
-        if(status == "Clouds") {
+        if(statusDefault == "Clouds") {
             if(day==true){
                 condPicLight.src = "weathercondition/cloudyDay.png";
             } else {
                 condPicDark.src = "weathercondition/cloudyNight.png";
             }
-        } else if (status == "Thunderstorm") {
+        } else if (statusDefault == "Thunderstorm") {
             if(day==true){
                 condPicLight.src = "weathercondition/thunderDay.png";
             } else {
                 condPicDark.src = "weathercondition/thunderNight.png";
             }
-        } else if (status == "Drizzle") {
+        } else if (statusDefault == "Drizzle") {
             if(day==true){
                 condPicLight.src = "weathercondition/rainyDay.png";
             } else {
                 condPicDark.src = "weathercondition/rainyNight.png";
             }
-        } else if (status == "Rain") {
+        } else if (statusDefault == "Rain") {
             if(day==true){
                 condPicLight.src = "weathercondition/rainyDay.png";
             } else {
                 condPicDark.src = "weathercondition/rainyNight.png";
             }
-        } else if (status == "Snow") {
+        } else if (statusDefault == "Snow") {
             if(day==true){
                 condPicLight.src = "weathercondition/snowyDay.png";
             } else {
                 condPicDark.src = "weathercondition/snowyNight.png";
             }
-        } else if (status == "Clear") {
+        } else if (statusDefault == "Clear") {
             if(day==true){
                 condPicLight.src = "weathercondition/clearDay.png";
             } else {
@@ -83,9 +83,7 @@ const defaultDisplay = () => {
             }
         }
     }
-}
-// let date = new Date(1663799906*1000);
-// document.getElementsByClassName('dateLight')[0].innerHTML = date.getHours() + ":" + date.getMinutes();
+
 input.addEventListener('keypress', (event) => {
     if(event.keyCode == 13) {
         getWeather(input.value)
