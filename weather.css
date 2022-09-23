@@ -335,6 +335,94 @@ span {
     #containerDotorhDuguiSarDark {
         display: none;
     }
+    .light {
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+    }
+    .lightContainer {
+        background-color: #fff;
+        width: 100vw;
+        height: 100vh;
+    }
+    .dark {
+        background-color: #0B0F1A;
+        width: 100vw;
+        height: 100vh;
+    }
+    .darkContainer {
+        background-color: #0B0F1A;
+        width: 100vw;
+        height: 100vh;
+    }
+    .darkNarSarContainer {
+        width: 100vw;
+        height: 100vh;
+    }
+    .lightNarSarContainer {
+        width: 100vw;
+        height: 100vh;
+    }
+} 
+@media screen and (max-width : 375px) {
+    .searchLight {
+        width: 200px;
+    }
+    .searchDark {
+        width: 200px;
+    }
+    .ellipseBackgroundLight {
+        display: none;
+    }
+    .ellipseBackgroundDark {
+        display: none;
+    }
+    #containerDotorhDuguiNar {
+        display: none;
+    }
+    #containerDotorhDuguiSar {
+        display: none;
+    }
+    #containerDotorhDuguiNarDark {
+        display: none;
+    }
+    #containerDotorhDuguiSarDark {
+        display: none;
+    }
+    .conditionPicLight {
+        width: 300px;
+    }
+    .conditionPicDark {
+        width: 300px;
+    }
+    .light {
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+    }
+    .lightContainer {
+        background-color: #fff;
+        width: 100vw;
+        height: 100vh;
+    }
+    .dark {
+        background-color: #0B0F1A;
+        width: 100vw;
+        height: 100vh;
+    }
+    .darkContainer {
+        background-color: #0B0F1A;
+        width: 100vw;
+        height: 100vh;
+    }
+    .darkNarSarContainer {
+        width: 100vw;
+        height: 100vh;
+    }
+    .lightNarSarContainer {
+        width: 100vw;
+        height: 100vh;
+    }
 }
 .searchLight {
     border: 0.5px solid rgba(17, 24, 39, 0.75);
