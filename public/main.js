@@ -34,10 +34,12 @@ let unixNow = Math.floor(Date.now()/1000)
             day = true
             document.getElementsByClassName("lightContainer")[0].style.display = 'flex';
             document.getElementsByClassName("darkContainer")[0].style.display = 'none';
+            document.getElementsByTagName("body")[0].style.backgroundColor = "#F3F4F6";
         } else {
             day = false
             document.getElementsByClassName("lightContainer")[0].style.display = 'none';
             document.getElementsByClassName("darkContainer")[0].style.display = 'flex';
+            document.getElementsByTagName("body")[0].style.backgroundColor = "#0B0F1A";
         }
         if(statusDefault == "Clouds") {
             if(day==true){
@@ -124,10 +126,12 @@ function displayData(Name, tempRaw, status, unixSR, unixSS) {
         day = true
         document.getElementsByClassName("lightContainer")[0].style.display = 'flex';
         document.getElementsByClassName("darkContainer")[0].style.display = 'none';
+        document.getElementsByTagName("body")[0].style.backgroundColor = "#F3F4F6";
     } else {
         day = false
         document.getElementsByClassName("lightContainer")[0].style.display = 'none';
         document.getElementsByClassName("darkContainer")[0].style.display = 'flex';
+        document.getElementsByTagName("body")[0].style.backgroundColor = "#0B0F1A";
     }
     if(status == "Clouds") {
         if(day==true){
