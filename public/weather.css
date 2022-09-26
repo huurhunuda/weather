@@ -282,6 +282,20 @@ span {
         left: calc((100vw - calc(100vw - calc(100vw/4)*2))/2);
         top: calc((100vh - calc(100vw - calc(100vw/4)*2))/2);
     }
+    .secondDark {
+        width: calc(100vw - calc(100vw/4));
+        height: calc(100vw - calc(100vw/4));
+        position: absolute;
+        left: calc((100vw - calc(100vw - calc(100vw/4)))/2);
+        top: calc((100vh - calc(100vw - calc(100vw/4)))/2);
+    }
+    .firstDark {
+        width: calc(100vw - calc(100vw/4)*2);
+        height: calc(100vw - calc(100vw/4)*2);
+        position: absolute;
+        left: calc((100vw - calc(100vw - calc(100vw/4)*2))/2);
+        top: calc((100vh - calc(100vw - calc(100vw/4)*2))/2);
+    }
 }
 @media screen and (max-width: 1024px) and (min-width: 600px) {
     .thirdLight {
