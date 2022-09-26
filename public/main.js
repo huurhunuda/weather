@@ -15,9 +15,9 @@ const condPicDark = document.getElementsByClassName('conditionPicDark')[0];
 let today = new Date();
 let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 let currMonth = months[today.getMonth()];
-let unixNow = Math.floor(Date.now()/1000)
 document.getElementsByClassName('dateLight')[0].innerHTML = currMonth + " " + today.getDate() + ", " + today.getFullYear();
 document.getElementsByClassName('dateDark')[0].innerHTML = currMonth + " " + today.getDate() + ", " + today.getFullYear();
+let unixNow = Math.floor(Date.now()/1000)
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=Ulaanbaatar&appid=b54c363da58b83c8327f53f5ddbc81c0`).then((res) => {
         return res.json();
